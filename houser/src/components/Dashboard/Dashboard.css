@@ -1,0 +1,34 @@
+.Dashboard {
+  background: #E5F4EC;
+  max-width: 1000px;
+  height: calc(100vh - 100px);
+  display: block;
+  margin: 0 auto;
+  padding: 25px;
+}
+.dashHeader {
+  width: 100%;
+  height: 75px;
+  border-bottom: 3px solid black;
+}
+
+.dashHeader button {
+  padding: 10px 25px;
+  float: right;
+  font-size: 18pt;
+  background: #8AEA92;
+}
+
+.dashHeader h1{
+  float: left;
+  font-size: 50pt;
+}
+.dashSubHeader {
+  width: 100%;
+  height: 50px;
+}
+.dashSubHeader h1 {
+  margin-left: 25px;
+  font-size: 18pt;
+  padding: 10px;
+}

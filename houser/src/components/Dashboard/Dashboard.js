@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { populate_houses } from '../../ducks/properties'
 import Houses from '../House/House'
 import axios from 'axios'
+import './Dashboard.css'
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -17,7 +18,13 @@ class Dashboard extends Component {
     })
     return(
       <div className="Dashboard">
-        <Link to="/wizard1"><button>Add New Property</button></Link>
+        <div className="dashHeader">
+          <h1>Dashboard</h1>
+          <Link to="/wizard1"><button>Add New Property</button></Link>
+        </div>
+        <div className="dashSubHeader">
+          <h1>Home Listings</h1>
+        </div>
         {arrHouses}
       </div>
     );

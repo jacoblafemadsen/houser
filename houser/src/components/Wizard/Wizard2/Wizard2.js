@@ -1,33 +1,40 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { updateImg, cancel } from '../../../ducks/properties'
+import './Wizard2.css'
 
-export default class Wizard2 extends Component {
-  constructor() {
-    super()
-    this.state = {
-      url: '',
-    }
-  }
-  updateUrl(e) {
-    this.setState({url: e})
-  }
+class Wizard2 extends Component {
   render() {
     return(
       <div className="Wizard2">
-        <Link to="/"><button>Cancel</button></Link>
+        <div className="wizHeader">
+          <h1>Add New Listing</h1>
+          <Link to="/"><button onClick={() => this.props.cancel()}>Cancel</button></Link>
+        </div>        
         <div className="inputsWizard">
 
           <label>Image URL: </label>
           <input className="input"
             placeholder="Image URL"
             type="text"
-            value={this.state.url}
-            onChange={e => this.updateUrl(e.target.value)}/>
+            value={this.props.img}
+            onChange={e => this.props.updateImg(e.target.value)}/>
 
         </div>
-        <Link to="/wizard1"><button>Previous Step</button></Link>
-        <Link to="/wizard3"><button>Next Step</button></Link>
+        <div className="wizBotBut">
+          <Link to="/wizard1"><button className="wizBotBut1">Previous Step</button></Link>
+          <Link to="/wizard3"><button className="wizBotBut2">Next Step</button></Link>
+        </div>
       </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    img: state.img
+  }
+}
+
+export default connect(mapStateToProps, { updateImg, cancel })(Wizard2)

@@ -1,0 +1,28 @@
+.House {
+  width: 100%;
+  height: 200px;
+  background: #DEDEDE;
+  padding: 10px;
+  display: flex;
+}
+.houseImg {
+  height: 100%;
+  width: 300px;
+}
+.houseImg img {
+  height: 100%;
+}
+.houseBody1 {
+  width: 245px;
+  height: 100%;
+  font-size: 14pt;
+  padding-left: 25px;
+  line-height: 27px;
+}
+.houseBody2 {
+  width: 245px;
+  height: 100%;
+  font-size: 14pt;
+  padding-left: 25px;
+  line-height: 27px;
+}

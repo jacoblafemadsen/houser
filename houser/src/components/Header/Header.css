@@ -1,0 +1,13 @@
+.Header {
+  width: 100%;
+  height: 100px;
+  background: #519872;
+  position: relative;
+}
+.Header > h1 {
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  left: 400px;
+  top: 25px;
+}
